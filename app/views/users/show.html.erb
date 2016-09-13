@@ -1,0 +1,8 @@
+<h1><%= @user.username %></h1>
+<ul>
+  <li><%= @user.points_earned %> points saved up</li>
+  <li><%= @user.points_spent %> points spent on cool stuff</li>
+</ul>
+<% @user.rewards.each do |reward| %>
+  <%= render partial: 'shared/reward', locals: {reward: reward} %>
+<% end %>

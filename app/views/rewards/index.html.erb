@@ -1,0 +1,6 @@
+<h1>Rewards!</h1>
+<ul>
+<% @rewards.each do |reward| %>
+  <li><%= render partial: 'shared/reward', locals: { reward: reward } %></li>
+<% end %>
+</ul>
