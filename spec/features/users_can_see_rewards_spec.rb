@@ -17,7 +17,6 @@ RSpec.feature "Users can see rewards" do
 
   context "When logged in" do
     scenario "user wants to see rewards" do
-      pending "impliment user"
       #as a visiter
       #given rewards exist
       reward = create :reward

@@ -1,6 +1,11 @@
 <h1>Rewards!</h1>
 <ul>
 <% @rewards.each do |reward| %>
-  <li><%= render partial: 'shared/reward', locals: { reward: reward } %></li>
+  <li>
+    <%= render partial: 'shared/reward', locals: { reward: reward } %>
+    <% if require_login && current_user.points_earned > reward.value %>
+      <%= button_for "Purchase" %>
+    <% end %>
+  </li>
 <% end %>
 </ul>
